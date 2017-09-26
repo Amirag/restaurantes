@@ -9,7 +9,6 @@ import http from 'http';
 const app = express();
 const server = http.createServer(app);
 const env = process.env.NODE_ENV || 'development';
-console.log('environment', env);
 
 if (env === 'production') {
   app.get('*.js', (req, res, next) => {

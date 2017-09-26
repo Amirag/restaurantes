@@ -13,38 +13,40 @@ export default function(app) {
 
   app.use('/static', express.static(path.join(__dirname, 'public')));
 
+  console.log(path.join(__dirname, '/../favicons', 'favicon-32x32.png'));
+
   app.use('/manifest.json', express.static(
-    path.join(__dirname, 'favicons', 'manifest.json')
+    path.join(__dirname, '/../favicons', 'manifest.json')
   ));
   app.use('/android-chrome-192x192.png', express.static(
-    path.join(__dirname, 'favicons', 'android-chrome-192x192.png')
+    path.join(__dirname, '/../favicons', 'android-chrome-192x192.png')
   ));
   app.use('/android-chrome-256x256.png', express.static(
-    path.join(__dirname, 'favicons', 'android-chrome-256x256.png')
+    path.join(__dirname, '/../favicons', 'android-chrome-256x256.png')
   ));
   app.use('/android-chrome-512x512.png', express.static(
-    path.join(__dirname, 'favicons', 'android-chrome-512x512.png')
+    path.join(__dirname, '/../favicons', 'android-chrome-512x512.png')
   ));
   app.use('/apple-touch-icon.png', express.static(
-    path.join(__dirname, 'favicons', 'apple-touch-icon.png')
+    path.join(__dirname, '/../favicons', 'apple-touch-icon.png')
   ));
   app.use('/browserconfig.xml', express.static(
-    path.join(__dirname, 'favicons', 'browserconfig.xml')
+    path.join(__dirname, '/../favicons', 'browserconfig.xml')
   ));
   app.use('/favicon.ico', express.static(
-    path.join(__dirname, 'favicons', 'favicon.ico')
+    path.join(__dirname, '/../favicons', 'favicon.ico')
   ));
   app.use('/favicon-16x16.png', express.static(
-    path.join(__dirname, 'favicons', 'favicon-16x16.png')
+    path.join(__dirname, '/../favicons', 'favicon-16x16.png')
   ));
-  app.use('/favicon-32x32.json', express.static(
-    path.join(__dirname, 'favicons', 'favicon-32x32.png')
+  app.use('/favicon-32x32.png', express.static(
+    path.join(__dirname, '/../favicons', 'favicon-32x32.png')
   ));
   app.use('/mstile-150x150.png', express.static(
-    path.join(__dirname, 'favicons', 'mstile-150x150.png')
+    path.join(__dirname, '/../favicons', 'mstile-150x150.png')
   ));
   app.use('/safari-pinned-tab.svg', express.static(
-    path.join(__dirname, 'favicons', 'safari-pinned-tab.svg')
+    path.join(__dirname, '/../favicons', 'safari-pinned-tab.svg')
   ));
 
   app.route('/:url(api/auth/components/app/node_components/assets)/*')
