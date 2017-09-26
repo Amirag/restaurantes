@@ -14,5 +14,12 @@ module.exports = {
         timestamps: false
       }
     }
+  },
+  smtp: {
+    credentials: {
+      user: 'mis.restaurantes2017@gmail.com',
+      pass: 'A6pb983JPMkGvt7bAlFa'
+    },
+    from: 'Mis restaurantes <mis.restaurantes2017@gmail.com>'
   }
 };

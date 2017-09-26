@@ -9,38 +9,38 @@ const db = {
   sequelize: new Sequelize(config.sequelize.uri, config.sequelize.options)
 };
 
-db.User = db.sequelize.import('../api/user/user.model');
-db.NewUser = db.sequelize.import('../api/user/user.new.model');
+db.User = db.sequelize.import('User', require('../api/user/user.model'));
+db.NewUser = db.sequelize.import('NewUser', require('../api/user/user.new.model'));
 // db.UserHistory = db.sequelize.import('../api/user/user.history.model');
 
-db.MenuPaths = db.sequelize.import('../api/menu/menu.paths.model');
-db.MenuNodes = db.sequelize.import('../api/menu/menu.nodes.model');
+db.MenuPaths = db.sequelize.import('MenuPaths', require('../api/menu/menu.paths.model'));
+db.MenuNodes = db.sequelize.import('MenuNodes', require('../api/menu/menu.nodes.model'));
 // db.MenuNodesHistory = db.sequelize.import(
 //   '../api/menu/menu.nodes.history.model'
 // );
 
-db.Restaurante = db.sequelize.import('../api/menu/restaurante.model');
+db.Restaurante = db.sequelize.import('Restaurante', require('../api/menu/restaurante.model'));
 // db.RestauranteHistory = db.sequelize.import(
 //   '../api/menu/restaurante.history.model'
 // );
 
-db.Platillo = db.sequelize.import('../api/menu/platillo.model');
+db.Platillo = db.sequelize.import('Platillo', require('../api/menu/platillo.model'));
 // db.PlatilloHistory = db.sequelize.import(
 //   '../api/menu/platillo.history.model'
 // );
 
-db.Categoria = db.sequelize.import('../api/menu/categoria.model');
-db.Visita = db.sequelize.import('../api/visita/visita.model');
-db.MenuLikes = db.sequelize.import('../api/menu/menu.likes.model');
-db.MenuAdmin = db.sequelize.import('../api/menu/menu.admin.model');
-db.User = db.sequelize.import('User', require('../api/user/user.model'));
+db.Categoria = db.sequelize.import('Categoria', require('../api/menu/categoria.model'));
+db.Visita = db.sequelize.import('Visita', require('../api/visita/visita.model'));
+db.MenuLikes = db.sequelize.import('MenuLikes', require('../api/menu/menu.likes.model'));
+db.MenuAdmin = db.sequelize.import('MenuAdmin', require('../api/menu/menu.admin.model'));
+//db.User = db.sequelize.import('User', require('../api/user/user.model'));
 // db.UserHistory = db.sequelize.import(
 //   'UserHistory',
 //   require('../api/user/user.history.model')
 // );
 
-db.Estado = db.sequelize.import('../api/estados/estados.model');
-db.Ciudad = db.sequelize.import('../api/ciudades/ciudades.model');
+db.Estado = db.sequelize.import('Estado', require('../api/estados/estados.model'));
+db.Ciudad = db.sequelize.import('Ciudad', require('../api/ciudades/ciudades.model'));
 
 // db.User.hasMany(db.UserHistory, { foreignKey: 'userId' });
 // db.UserHistory.belongsTo(db.User, { foreignKey: 'userId' });
