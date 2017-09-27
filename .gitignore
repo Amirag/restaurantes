@@ -9,6 +9,7 @@ webpack.common.js
 webpack.config.js
 webpack.dev.js
 webpack.prod.js
+ecosystem.config.js
 server/api/**/*.js
 server/auth/**/*.js
 server/config/**/*.js
