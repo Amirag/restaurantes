@@ -5,6 +5,7 @@ SQL\ Queries
 .eslintrc
 package-lock.json
 todolist
+instrucciones.txt
 webpack.common.js
 webpack.config.js
 webpack.dev.js
