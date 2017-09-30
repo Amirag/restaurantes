@@ -8,6 +8,7 @@
     "watch": "webpack --progress --colors --watch --config webpack.dev.js",
     "serve": "webpack-dev-server --progress --colors --config webpack.dev.js",
     "start": "set NODE_ENV=development&& node server",
+    "development": "pm2 startOrRestart ecosystem.config.js --env development",
     "production": "set NODE_ENV=production&& node server"
   },
   "author": "",
